@@ -47,7 +47,7 @@ section {
 .about,
 .eduction,
 .skills,
-.projects,
+.experience,
 .contact,
 footer {
     font-family: 'Poppins', sans-serif;
@@ -309,20 +309,23 @@ section .title::after {
 /* eduction section styling */
 
 .eduction,
-.projects {
+.experience {
     color: #fff;
     background: #111;
 }
 
 .eduction .title::before,
-.projects .title::before {
+.experience .title::before {
     background: #fff;
 }
 
-.eduction .title::after,
-.projects .title::after {
+.eduction .title::after {
     background: #111;
     content: "what i studied";
+}
+.experience .title::after {
+    background: #111;
+    content: "experience";
 }
 
 .eduction .serv-content .card {
@@ -458,82 +461,42 @@ section .title::after {
     width: 70%;
 }
 
-
-/* projects section styling */
-
-.projects .title::after {
-    content: "what i did";
-}
-
-.projects .carousel .card {
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.projects .carousel .card:hover {
-    background: crimson;
-}
-
-.projects .carousel .card .box {
+/* Styling for the experience cards container */
+section.experience .experience-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+    flex-wrap: wrap;        
+    justify-content: space-between;
 }
 
-.projects .carousel .card:hover .box {
-    transform: scale(1.05);
+/* Styling for each individual card */
+section.experience .card {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
 }
 
-.projects .carousel .card .text {
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
+/* Styling for the card's inner content */
+section.experience .card .box {
+    position: relative;
 }
 
-.projects .carousel .card img {
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid crimson;
-    transition: all 0.3s ease;
+/* Styling for the position title */
+section.experience .card .box .text {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.projects .carousel .card:hover img {
-    border-color: #fff;
+/* Styling for the job details */
+section.experience .card .box p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5em;
 }
-
-.owl-dots {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.owl-dot {
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid crimson!important;
-    transition: all 0.3s ease;
-}
-
-.owl-dot.active {
-    width: 35px;
-    border-radius: 14px;
-}
-
-.owl-dot.active,
-.owl-dot:hover {
-    background: crimson!important;
-}
-
 
 /* contact section styling */
 
@@ -864,5 +827,12 @@ footer span a:hover {
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    section.experience .card {
+        width: 100%;
     }
 }
