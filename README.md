@@ -1,7 +1,7 @@
-Vishal Sonawane - Software Developer
+Vishal Sonawane - Frontend Developer
 
 About Me:
-Vishal Sonawane is a dedicated and passionate software developer with a strong focus on creating efficient and innovative software solutions. With a solid foundation in various programming languages and technologies, Vishal excels in developing robust applications that meet client needs and industry standards.
+Vishal Sonawane is a dedicated and passionate front-end developer with a strong focus on creating efficient and innovative software solutions. With a solid foundation in various programming languages and technologies, Vishal excels in developing robust applications that meet client needs and industry standards.
 
 Work Experience:
 Vishal has accumulated significant experience working with diverse teams and projects. Through various professional roles, Vishal has honed skills in software development, project management, and team collaboration, consistently delivering high-quality results.
