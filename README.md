@@ -1,22 +1,9 @@
 Vishal Sonawane - Frontend Developer
 
-About Me:
-Vishal Sonawane is a dedicated and passionate front-end developer with a strong focus on creating efficient and innovative software solutions. With a solid foundation in various programming languages and technologies, Vishal excels in developing robust applications that meet client needs and industry standards.
+I have strong expertise in JavaScript, with extensive experience using ReactJS for building dynamic, user-centric front-end applications. I am proficient in HTML5, CSS3, and modern frameworks like Bootstrap and Tailwind CSS to create responsive, mobile-first web designs. Additionally, I’m skilled in TypeScript and have worked with PHP for backend development. My knowledge extends to Node.js and Express.js, enabling me to build scalable, server-side applications.
 
-Work Experience:
-Vishal has accumulated significant experience working with diverse teams and projects. Through various professional roles, Vishal has honed skills in software development, project management, and team collaboration, consistently delivering high-quality results.
+I am well-versed in working with databases such as MongoDB, PostgreSQL, and MySQL, and have experience integrating these databases with front-end applications. I also use Firebase for real-time data synchronization. For version control, I rely on Git, GitHub, and GitLab, ensuring seamless collaboration across teams. My development process is highly structured, utilizing JIRA for project management in an Agile environment.
 
-Skills:
+In addition to front-end and back-end development, I have hands-on experience with cloud technologies like Google Cloud Platform (GCP) and AWS, where I have integrated APIs and optimized cloud storage solutions. I am also familiar with the basics of DevOps practices, such as continuous deployment and cloud configuration.
 
-Programming Languages: Proficient in JavaScript, Python, and C++.
-Web Technologies: Experienced with HTML, CSS, React, and Node.js.
-Tools & Platforms: Skilled in using Git, Docker, and various CI/CD tools.
-Other Skills: Strong problem-solving abilities, effective communication, and a keen eye for detail.
-Projects:
-Vishal's portfolio includes a range of projects demonstrating expertise in both front-end and back-end development. These projects showcase a commitment to innovation, user experience, and performance optimization.
-
-Education:
-Vishal holds a degree in Computer Science, which has provided a strong theoretical foundation and practical skills necessary for a successful career in software development.
-
-Contact:
-For inquiries or collaborations, Vishal can be reached through the contact form on the website.
+My commitment to continuous learning is evident through certifications like AWS Cloud Technical Essentials, and online courses on HTML, CSS, JavaScript, and Python. These skills, combined with my ability to troubleshoot, optimize performance, and collaborate with cross-functional teams, enable me to build high-quality, scalable web applications that meet both user needs and business goals.
