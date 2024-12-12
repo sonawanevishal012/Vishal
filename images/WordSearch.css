@@ -1,0 +1,161 @@
+/* Container for the entire Word Search component */
+.word-search-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: rgb(229, 245, 246);
+}
+
+.word-search-container span{
+  color:red;
+}
+
+/* Controls for the words input field */
+.controls {
+  margin-bottom: 20px;
+}
+
+/* Input for entering comma-separated words */
+.controls input {
+  padding: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* Grid container with glass effect */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 40px); /* Dynamic grid size */
+  grid-gap: 5px; /* Space between grid cells */
+  margin-top: 20px;
+  
+  /* Glass effect background */
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+  border-radius: 15px; /* Rounded corners for the container */
+  backdrop-filter: blur(10px); /* Apply the blur effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 15px; /* Padding around the grid */
+}
+
+/* Individual grid cells */
+.grid-cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Light border */
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  border-radius: 5px; /* Rounded corners for individual cells */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8); /* Darker text color */
+  
+  /* Prevent text selection */
+  user-select: none;
+}
+
+/* Style for selected cells */
+.grid-cell.selected {
+  background-color: lightblue;
+  color: green; /* Make selected word green */
+}
+
+/* Style for cells that are part of a found word */
+.grid-cell.found {
+  background-color: green;
+  color: white;
+}
+
+/* Styling for found words list */
+.found-words {
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+/* List of found words */
+.found-words ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Each found word with line-through styling */
+.found-words li {
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-decoration: line-through;
+}
+
+/* Hover effect for grid cells */
+.grid-cell:hover {
+  background-color: lightgray;
+  color: green; /* Make hover color green */
+}
+
+/* Win popup for thumbs up */
+.win-popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(246, 246, 88, 0.7);
+  color: red;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Button for restarting the game */
+.restart-button {
+  position: absolute; /* Use absolute positioning */
+  top: 20px; /* Position from the top */
+  right: 20px; /* Position from the right */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.restart-button:hover {
+  background-color: #218838;
+}
+
+/* Animation for found words */
+@keyframes found-word-animation {
+  0% {
+    background-color: rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    background-color: rgba(0, 255, 0, 0.4);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 255, 0, 0.5);
+    transform: scale(1.1);
+  }
+  100% {
+    background-color: rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.4);
+    transform: scale(1);
+  }
+}
+
+/* Apply animation to cells of found words */
+.grid-cell.found {
+  background-color: rgba(255, 255, 255, 0.3); /* Neutral glass effect */
+  color: black;
+  backdrop-filter: blur(5px); /* Glass effect */
+  animation: found-word-animation 1.5s ease-in-out infinite alternate;
+  border: 1px solid rgba(247, 39, 39, 0.4); /* Light green border */
+  z-index: 10; /* Ensure it's above other cells */
+}
