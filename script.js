@@ -68,9 +68,8 @@ $(document).ready(function() {
         }
     });
 
-  // Contact form submission with success banner, field reset, and delayed redirect
-$("form").on("submit", function(e) {
-    e.preventDefault();
+  $("#contact-form").on("submit", function(e) {
+    e.preventDefault(); // prevent Formspree redirect
 
     var form = this;
     var formData = new FormData(form);
@@ -83,16 +82,15 @@ $("form").on("submit", function(e) {
         }
     }).then(function(response) {
         if (response.ok) {
-            // ✅ Reset form fields properly
+            // ✅ Clear all fields
             $(form).find("input[type=text], input[type=email], textarea").val("");
 
             // ✅ Show success message
             $("#success-message").fadeIn();
 
-            // ✅ Hide success message after 2 seconds
+            // ✅ Hide after 2 seconds and redirect
             setTimeout(function () {
                 $("#success-message").fadeOut();
-                // ✅ Redirect after message fades out
                 window.location.href = "https://sonawanevishal012.github.io/Vishal/#contact";
             }, 2000);
         } else {
