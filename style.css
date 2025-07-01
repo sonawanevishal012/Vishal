@@ -701,7 +701,9 @@ footer span a:hover {
     color: white;
 }
 
-
+#success-message{
+    display:none; color: crimson; font-weight: bold; margin-bottom: 15px;
+}
 /* responsive media query start */
 
 @media (max-width: 1300px) {
