@@ -68,7 +68,7 @@ $(document).ready(function() {
         }
     });
 
-   // Contact form submission with success banner & delayed redirect
+  // Contact form submission with success banner, field reset, and delayed redirect
 $("form").on("submit", function(e) {
     e.preventDefault();
 
@@ -83,12 +83,16 @@ $("form").on("submit", function(e) {
         }
     }).then(function(response) {
         if (response.ok) {
-            form.reset();
+            // ✅ Reset form fields properly
+            $(form).find("input[type=text], input[type=email], textarea").val("");
+
             // ✅ Show success message
             $("#success-message").fadeIn();
 
-            // ✅ Delay redirect by 2 seconds
-            setTimeout(function() {
+            // ✅ Hide success message after 2 seconds
+            setTimeout(function () {
+                $("#success-message").fadeOut();
+                // ✅ Redirect after message fades out
                 window.location.href = "https://sonawanevishal012.github.io/Vishal/#contact";
             }, 2000);
         } else {
@@ -99,9 +103,4 @@ $("form").on("submit", function(e) {
     });
 });
 
-   // Hide success message after 5 seconds
-   $("#success-message").hide();
-   setTimeout(function() {
-       $("#success-message").fadeOut();
-   }, 5000);
 });
