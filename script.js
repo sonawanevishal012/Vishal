@@ -18,12 +18,10 @@ $(document).ready(function() {
     // slide-up script
     $('.scroll-up-btn').click(function() {
         $('html').animate({ scrollTop: 0 });
-        // removing smooth scroll on slide-up button click
         $('html').css("scrollBehavior", "auto");
     });
 
     $('.navbar .menu li a').click(function() {
-        // applying again smooth scroll on menu items click
         $('html').css("scrollBehavior", "smooth");
     });
 
@@ -69,4 +67,41 @@ $(document).ready(function() {
             }
         }
     });
+
+   // Contact form submission with success banner & delayed redirect
+$("form").on("submit", function(e) {
+    e.preventDefault();
+
+    var form = this;
+    var formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(function(response) {
+        if (response.ok) {
+            form.reset();
+            // ✅ Show success message
+            $("#success-message").fadeIn();
+
+            // ✅ Delay redirect by 2 seconds
+            setTimeout(function() {
+                window.location.href = "https://sonawanevishal012.github.io/Vishal/#contact";
+            }, 2000);
+        } else {
+            alert("Oops! Something went wrong. Please try again.");
+        }
+    }).catch(function(error) {
+        alert("Oops! There was a problem submitting your form.");
+    });
+});
+
+   // Hide success message after 5 seconds
+   $("#success-message").hide();
+   setTimeout(function() {
+       $("#success-message").fadeOut();
+   }, 5000);
 });
